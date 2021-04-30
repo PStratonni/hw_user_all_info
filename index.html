@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <section id="ex-1">
+      <div class="wrapper-user" id="users"></div>
+    </section>
+    <section id="ex-2" class="hidden">
+      <div class="wrapper">
+        <div id="wrapper-tabs">
+          <div class="tabs" id="tabs_info"><h3>Info</h3></div>
+          <div class="tabs" id="tabs_todo"><h3>ToDo</h3></div>
+          <div class="tabs" id="tabs_posts"><h3>Posts</h3></div>
+          <div class="tabs" id="tabs_albums"><h3>Albums</h3></div>
+        </div>
+        <div id="wrapper-content">
+          <div id="info"></div>
+          <div class="hidden" id="todo"><ul></ul></div>
+          <div class="hidden" id="posts"><ul></ul></div>
+          <div class="hidden" id="albums"><ul></ul></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="hidden block">
+        <div id="photos"></div>
+        <div id="off"><p>X</p></div>
+      </div>
+    </section>
+  </body>
+</html>
