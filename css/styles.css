@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #a0a195;
+  background: radial-gradient(#c6eaed 20%, #41070d);
 }
 
 .ex-1 {
@@ -22,20 +22,23 @@ body {
   margin-top: 30px;
   margin-right: 15px;
   padding: 30px;
-  background-color: #ca8a8b;
-  color: #a75e5f;
+  background-color: #f67e79;
+  color: #d83332;
   border-radius: 10px 50px;
   font-size: 1.4em;
   cursor: pointer;
   min-width: 165px;
+  box-shadow: inset #d83332 0 0 23px 3px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
 
 .users:hover {
-  background-color: #e6c4c0;
+  background-color: #fde4e2;
+  box-shadow: inset #f67e79 0 0 23px 3px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
 
 .user-event {
-  background-color: #e6c4c0;
+  background-color: #fde4e2;
+  box-shadow: inset #f67e79 0 0 23px 3px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
 
 #wrapper-tabs {
@@ -48,12 +51,14 @@ body {
 .tabs {
   margin-top: 30px;
   padding: 30px;
-  background-color: #ca8a8b;
-  color: #a75e5f;
+  background-color: #f67e79;
+  color: #d83332;
   border-radius: 50px 50px 0 0;
   font-size: 1.4em;
   cursor: pointer;
   min-width: 25%;
+  box-shadow: inset #d83332 0 6px 26px 3px,
+    rgba(0, 0, 0, 0.8) 0 3px 8px -3px inset;
 }
 
 .tabs:hover {
@@ -62,20 +67,24 @@ body {
 }
 
 .tabs-event {
-  background-color: #e6c4c0;
+  background-color: #fde4e2;
+  box-shadow: inset rgb(216, 51, 50, 0.5) 0 26px 26px 3px,
+    inset rgb(253, 228, 226, 1) 0 -8px 0 8px;
   border-radius: 10px 50px 0 0;
 }
 
 #wrapper-content {
   margin: 0 auto;
   width: 90%;
-  color: #a75e5f;
+  color: #d83332;
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: 700;
-  background-color: #e6c4c0;
+  background-color: #fde4e2;
   border-radius: 0 0 50px 50px;
   padding: 50px;
+  box-shadow: inset rgb(216, 51, 50, 0.5) 0 -26px 26px 3px,
+    inset rgb(253, 228, 226, 1) 0 8px 0 8px;
 }
 
 #wrapper-content * {
@@ -97,7 +106,7 @@ ul {
 }
 
 #albums span:hover {
-  background-color: #ca8a8b;
+  background-color: #f67e79;
 }
 
 .block {
@@ -128,14 +137,16 @@ ul {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: white;
+  background: radial-gradient(#c6eaed, #41070d);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #d83332;
 }
+
 #off:hover {
-  background-color: rgb(156, 151, 151);
+  background: radial-gradient(#41070d, #c6eaed);
 }
 
 .comments {

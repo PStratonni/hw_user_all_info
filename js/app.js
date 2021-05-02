@@ -219,19 +219,21 @@ const addEventPosts = () => {
   const spans = document.querySelectorAll("#posts span");
   for (let span of spans) {
     span.addEventListener("mouseover", (event) => {
-      console.log(event);
       event.preventDefault();
       const [, id] = event.target.id.split("_");
       document.querySelector(`#coments_${id}`).classList.remove("hidden");
-      console.log(event.clientX);
-      document.querySelector(`#coments_${id}`).style.left = `${event.clientX}px`;
-      document.querySelector(`#coments_${id}`).style.top = `${event.clientY-40}px`;
     });
     span.addEventListener("mouseout", (event) => {
       event.preventDefault();
       const [, id] = event.target.id.split("_");
       document.querySelector(`#coments_${id}`).classList.add("hidden");
     });
+    span.addEventListener('mousemove',event=>{
+      event.preventDefault();
+      const [, id] = event.target.id.split("_");
+      document.querySelector(`#coments_${id}`).style.left = `${event.clientX}px`;
+      document.querySelector(`#coments_${id}`).style.top = `${event.clientY-40}px`;
+    })
   }
 };
 
