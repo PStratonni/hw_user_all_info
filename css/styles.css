@@ -47,7 +47,25 @@ body {
   margin: 0 auto;
   margin-top: 50px;
 }
-
+#wrapper-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#tabs_todo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+}
+#tabs_posts {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+}
+#tabs_albums {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+}
 .tabs {
   margin-top: 30px;
   padding: 30px;
@@ -56,7 +74,6 @@ body {
   border-radius: 50px 50px 0 0;
   font-size: 1.4em;
   cursor: pointer;
-  min-width: 25%;
   box-shadow: inset #d83332 0 6px 26px 3px,
     rgba(0, 0, 0, 0.8) 0 3px 8px -3px inset;
 }
@@ -73,9 +90,8 @@ body {
   border-radius: 10px 50px 0 0;
 }
 
-#wrapper-content {
-  margin: 0 auto;
-  width: 90%;
+.content {
+  grid-column-start: span 4;
   color: #d83332;
   font-size: 24px;
   letter-spacing: 1px;
@@ -87,9 +103,9 @@ body {
     inset rgb(253, 228, 226, 1) 0 8px 0 8px;
 }
 
-#wrapper-content * {
+/* .content {
   margin-bottom: 15px;
-}
+} */
 
 .addres {
   list-style: none;

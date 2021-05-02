@@ -53,18 +53,18 @@ const toStart = (id) => {
   divClassRemove("#users div", "user-event");
   document.querySelector(`#user_${id}`).classList.add("user-event");
   document.querySelector("#ex-2").classList.remove("hidden");
-  divClassRemove("#wrapper-tabs div", "tabs-event");
+  divClassRemove(".tabs", "tabs-event");
   document.querySelector("#tabs_info").classList.add("tabs-event");
-  divClassAdd("#wrapper-content div", "hidden");
+  divClassAdd(".content", "hidden");
   document.querySelector("#info").classList.remove("hidden");
 };
 
 const addEventTabs = () => {
-  const tabs = document.querySelectorAll("#wrapper-tabs>div");
+  const tabs = document.querySelectorAll(".tabs");
   for (let tab of tabs) {
     tab.addEventListener("click", (event) => {
       event.preventDefault();
-      divClassRemove("#wrapper-tabs div", "tabs-event");
+      divClassRemove(".tabs", "tabs-event");
       tab.classList.add("tabs-event");
       const [, id] = event.currentTarget.id.split("_");
       removeHidden(id);
@@ -73,7 +73,7 @@ const addEventTabs = () => {
 };
 
 const removeHidden = (id) => {
-  const divs = document.querySelectorAll("#wrapper-content>div");
+  const divs = document.querySelectorAll(".content");
   for (let div of divs) {
     if (div.id === id) {
       div.classList.remove("hidden");
