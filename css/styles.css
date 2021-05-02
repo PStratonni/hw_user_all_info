@@ -4,7 +4,9 @@
 }
 
 body {
-  background: radial-gradient(#c6eaed 20%, #41070d);
+  background-image: radial-gradient(#c6eaed , #41070d);
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .ex-1 {
