@@ -64,10 +64,15 @@ const addEventTabs = () => {
   for (let tab of tabs) {
     tab.addEventListener("click", (event) => {
       event.preventDefault();
-      divClassRemove(".tabs", "tabs-event");
+      const windowInnerWidth = document.documentElement.clientWidth;
+      if (windowInnerWidth < 768 && tab.classList.contains("tabs-event")) {
+        tab.classList.remove("tabs-event");
+        document.querySelector(`#${event.currentTarget.id.split("_")[1]}`).classList.add('hidden');
+      }else
+      {divClassRemove(".tabs", "tabs-event");
       tab.classList.add("tabs-event");
       const [, id] = event.currentTarget.id.split("_");
-      removeHidden(id);
+      removeHidden(id);}
     });
   }
 };
@@ -228,12 +233,16 @@ const addEventPosts = () => {
       const [, id] = event.target.id.split("_");
       document.querySelector(`#coments_${id}`).classList.add("hidden");
     });
-    span.addEventListener('mousemove',event=>{
+    span.addEventListener("mousemove", (event) => {
       event.preventDefault();
       const [, id] = event.target.id.split("_");
-      document.querySelector(`#coments_${id}`).style.left = `${event.clientX}px`;
-      document.querySelector(`#coments_${id}`).style.top = `${event.clientY-40}px`;
-    })
+      document.querySelector(
+        `#coments_${id}`
+      ).style.left = `${event.clientX}px`;
+      document.querySelector(`#coments_${id}`).style.top = `${
+        event.clientY - 40
+      }px`;
+    });
   }
 };
 

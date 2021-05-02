@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: radial-gradient(#c6eaed , #41070d);
+  background-image: radial-gradient(#c6eaed, #41070d);
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -42,7 +42,9 @@ body {
   background-color: #fde4e2;
   box-shadow: inset #f67e79 0 0 23px 3px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
-
+.wrapper {
+  margin-bottom: 15px;
+}
 #wrapper-tabs {
   display: flex;
   width: 90%;
@@ -69,7 +71,6 @@ body {
   grid-row-start: 1;
 }
 .tabs {
-  margin-top: 30px;
   padding: 30px;
   background-color: #f67e79;
   color: #d83332;
@@ -104,10 +105,6 @@ body {
   box-shadow: inset rgb(216, 51, 50, 0.5) 0 -26px 26px 3px,
     inset rgb(253, 228, 226, 1) 0 8px 0 8px;
 }
-
-/* .content {
-  margin-bottom: 15px;
-} */
 
 .addres {
   list-style: none;
@@ -182,4 +179,34 @@ ul {
 
 .hidden {
   display: none;
+}
+@media (max-width: 768px) {
+  #wrapper-tabs {
+    display: block;
+  }
+  #tabs_todo,
+  #tabs_posts {
+    border-radius: 0;
+  }
+  .tabs_albums {
+    border-radius: 0 0 50px 50px;
+  }
+  .tabs-event {
+    background-color: #fde4e2;
+    box-shadow: inset rgb(216, 51, 50, 0.5) 0 26px 26px 3px,
+      inset rgb(253, 228, 226, 1) 0 -8px 0 8px;
+    border-radius: 10px 50px 0 0;
+  }
+  .tabs-event.tabs_albums {
+    background-color: #fde4e2;
+    box-shadow: inset rgb(216, 51, 50, 0.5) 0 26px 26px 3px,
+      inset rgb(253, 228, 226, 1) 0 -8px 0 8px;
+    border-radius: 0;
+  }
+  #info,#todo,#posts {
+    border-radius: 0;
+  }
+  .tabs:hover {
+    transform: scaleY(1);
+  }
 }
