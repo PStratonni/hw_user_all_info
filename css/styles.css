@@ -191,12 +191,12 @@ ul {
   .tabs_albums {
     border-radius: 0 0 50px 50px;
   }
-  .tabs-event {
+  /* .tabs-event {
     background-color: #fde4e2;
     box-shadow: inset rgb(216, 51, 50, 0.5) 0 26px 26px 3px,
       inset rgb(253, 228, 226, 1) 0 -8px 0 8px;
     border-radius: 10px 50px 0 0;
-  }
+  } */
   .tabs-event.tabs_albums {
     background-color: #fde4e2;
     box-shadow: inset rgb(216, 51, 50, 0.5) 0 26px 26px 3px,
