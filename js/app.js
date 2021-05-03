@@ -67,12 +67,15 @@ const addEventTabs = () => {
       const windowInnerWidth = document.documentElement.clientWidth;
       if (windowInnerWidth < 768 && tab.classList.contains("tabs-event")) {
         tab.classList.remove("tabs-event");
-        document.querySelector(`#${event.currentTarget.id.split("_")[1]}`).classList.add('hidden');
-      }else
-      {divClassRemove(".tabs", "tabs-event");
-      tab.classList.add("tabs-event");
-      const [, id] = event.currentTarget.id.split("_");
-      removeHidden(id);}
+        document
+          .querySelector(`#${event.currentTarget.id.split("_")[1]}`)
+          .classList.add("hidden");
+      } else {
+        divClassRemove(".tabs", "tabs-event");
+        tab.classList.add("tabs-event");
+        const [, id] = event.currentTarget.id.split("_");
+        removeHidden(id);
+      }
     });
   }
 };
@@ -140,10 +143,18 @@ const renderInfo = (user) => {
 const renderToDo = (todos) => {
   document.querySelector("#todo ul").innerHTML = "";
   todos.forEach((todo) => {
+    
+  if(!todo.completed){
     document.querySelector(
       "#todo ul"
     ).innerHTML += `<li><p>${todo.title}</p></li>
   `;
+  }else{document.querySelector(
+    "#todo ul"
+  ).innerHTML += `<li class="is_done"><p>${todo.title}</p></li>
+`;
+
+  }
   });
 };
 

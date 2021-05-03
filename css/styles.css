@@ -179,6 +179,10 @@ ul {
 .hidden {
   display: none;
 }
+.is_done {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
 
 @media (max-width: 768px) {
   #wrapper-tabs {
@@ -203,13 +207,15 @@ ul {
       inset rgb(253, 228, 226, 1) 0 -8px 0 8px;
     border-radius: 0;
   }
-  #info,#todo,#posts {
+  #info,
+  #todo,
+  #posts {
     border-radius: 0;
   }
   .tabs:hover {
     transform: scaleY(1);
   }
-  .block{
+  .block {
     padding: 150px 10px 0 10px;
   }
 }
